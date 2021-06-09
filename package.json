@@ -9,6 +9,17 @@
     "start": "webpack-dev-server --config ./webpack.config.js --hot",
     "test": "jest"
   },
+  "jest": {
+    "transform": {
+      "^.+\\.[t|j]sx?$": "babel-jest"
+    },
+    "moduleNameMapper": {
+      "^src/(.*)$":  "<rootDir>/src/$1",
+      "^lib/(.*)$":  "<rootDir>/lib/$1",
+      "\\.(css|scss)$": "<rootDir>/__mocks__/styleMock.js"
+    },
+    "testEnvironment": "jsdom"
+  },
   "keywords": [
     "challenge"
   ],
@@ -16,6 +27,9 @@
   "private": true,
   "license": "UNLICENSED",
   "devDependencies": {
+    "@babel/preset-env": "^7.14.4",
+    "@babel/preset-react": "^7.13.13",
+    "@babel/preset-typescript": "^7.13.0",
     "@testing-library/react": "^11.2.7",
     "@types/color": "^3.0.1",
     "@types/faker": "^5.5.3",
@@ -25,6 +39,7 @@
     "@types/uuid": "^8.3.0",
     "@typescript-eslint/eslint-plugin": "^4.22.1",
     "@typescript-eslint/parser": "^4.22.1",
+    "babel-jest": "^27.0.2",
     "color": "^3.1.2",
     "css-loader": "^3.1.0",
     "eslint": "^6.1.0",
