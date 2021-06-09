@@ -7,7 +7,7 @@
     "eslint": "eslint \"./lib/**/*.ts\" \"./src/**/*.ts\" \"./src/**/*.tsx\"",
     "format": "prettier --write .",
     "start": "webpack-dev-server --config ./webpack.config.js --hot",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "keywords": [
     "challenge"
@@ -16,6 +16,7 @@
   "private": true,
   "license": "UNLICENSED",
   "devDependencies": {
+    "@testing-library/react": "^11.2.7",
     "@types/color": "^3.0.1",
     "@types/faker": "^5.5.3",
     "@types/lodash": "^4.14.168",
@@ -32,6 +33,7 @@
     "eslint-plugin-react-hooks": "^4.2.0",
     "faker": "^4.1.0",
     "html-webpack-plugin": "^5.3.1",
+    "jest": "^27.0.4",
     "lodash": "^4.17.15",
     "luxon": "^1.17.1",
     "node-sass": "^4.12.0",
